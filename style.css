@@ -1,0 +1,418 @@
+  :root{
+            --purple:#2F192E;
+            --purple-light:#30192d;
+            --dark-blue:#012677;
+            --blue:#5c65c0;
+            --skyblue :#00b4fc;
+            --light-blue:#005bc5;
+            --dark-pink:#f64c57;
+            --dark-magenta:#e21b5a;
+            --light-green:#61e2c2;
+            --light-purple:#d9abff;
+        }
+        *{
+            box-sizing: border-box;
+            padding:0;
+            margin:0;
+            text-decoration: none;
+            font-family: poppins,sans-serif;
+        }
+        body{
+            background: linear-gradient(45deg, var(--purple), #EC407A);
+        }
+        .container{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 100%;
+            width: 100%;
+            flex-wrap: wrap;
+            position: relative;
+        }
+        .profile-card{
+            background: #111;
+            width:400px;
+            padding: 3rem;
+            border-radius: 10px;
+            min-height: 400px;
+            position: relative;
+            color:#fff;
+            margin: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+        }
+        .profile-card .profile-pic {
+            margin-top: 15px;
+            overflow: hidden;
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .profile-card .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .profile-card .profile-details{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            width:100%;
+        }
+        .profile-details .intro{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .profile-details .intro h2{
+            margin-top: 20px;
+        }
+        .profile-details .intro h4{
+            background: #1d1d1d;
+            font-weight: 400;
+            border-radius: 4px;
+            padding: 5px 10px;
+            margin: 8px;
+        }
+        .profile-details .intro .social{
+            margin-top: 10px;
+            margin-bottom: 25px;
+        }
+        .profile-details .intro .social i{
+            color:#ddd;
+            font-size: 16px;
+            background-color:#222;
+            margin: 5px;
+            height: 35px;
+            width:35px;
+            line-height: 35px;
+            text-align: center;
+            border-radius: 5px;
+            transition: 0.5s;
+        }
+        .profile-details .intro .social i:hover{
+            transform: scale(1.2);
+            border:1px solid rgba(255,255,255,0.3);
+        }
+        .profile-details .contact-info{
+            background-color: #1d1d1d;
+            padding: 15px;
+            border-radius: 10px;
+            width: 100%;
+        }
+        .profile-details .contact-info .row{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding: 10px 0;
+            margin-bottom: 10px;
+        }
+        .contact-info .row .icon{
+            height: 40px;
+            width: 40px;
+            line-height: 40px;
+            border-radius: 5px;
+            background-color: #111;
+            text-align: center;
+            color:#fff;
+            transition: 0.5s;
+        }
+        .row .icon:hover{
+            transform:scale(1.2);
+            border:1px solid rgba(255,255,255,0.1);
+        }
+        .row .content{
+            min-width: 70%;
+        }
+        .row .content span{
+            font-size: 12px;
+        }
+        .download-btn{
+            background: linear-gradient(45deg, #f64c57,#e21b5a);
+            color:#fff;
+            padding: 1rem 3rem;
+            border-radius: 30px;
+            margin-top: 1.5rem;
+            border:none;
+        }
+        /*****about section ****/
+        .about{
+            background-color: #111;
+            max-width: 800px;
+            padding: 2rem 3rem;
+            border-radius: 10px;
+        }
+        .about h1{
+            color:#f2f2f2;
+            margin-bottom: 1.1rem;
+            position: relative;
+            display: inline-block;
+            font-size: 3.5rem;
+        }
+        .about h1::after{
+            position: absolute;
+            content: "";
+            top:50%;
+            right:-50%;
+            width:45%;
+            height: 3px;
+            background: linear-gradient(45deg, #f64c57,#e21b5a);
+        }
+        .about h2{
+             color: #f2f2f2;
+             font-size: 0.8rem;
+             margin: -1rem 0;
+        }
+        .about p{
+            color:#555;
+            margin:1.5rem 0;
+        }
+        .about .work{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+        }
+        .work .workbox{
+            display: flex;
+            justify-content: space-between;
+            border-radius:8px;
+            border:1px solid #333;
+            padding: 1rem;
+            margin:1rem;
+        }
+        .work .workbox .desc{
+            width:75%;
+            color:#555;
+        }
+        .work .workbox .desc h3{
+            color:#f2f2f2;
+            margin-bottom: 3px;
+        }
+        .work .workbox .desc p{
+            margin:0px;
+        }
+        /***Responsive Design ***/
+        @media(max-width:768px) {
+            .about{
+                width: 100%;
+                max-width: 400px;
+                padding:1rem;
+                margin:1rem;
+            }
+            .about h1{
+                font-size: 1.2rem;
+            }
+            .about .work{
+                grid-template-columns: repeat(1,1fr);
+                grid-template-rows: repeat(4,auto);
+            }
+        }
+        /* Navbar Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            font-size: 28px;
+            color: #fff;
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            font-size: 22px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .navlinks {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navlinks li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .navlinks li a:hover {
+            color: #0077B5;
+        }
+
+        /* Toggle Button */
+        .togglebtn {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .togglebtn span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            transition: transform 0.3s ease;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .navlinks {
+                position: absolute;
+                top: 70px;
+                right: 0;
+                background-color: #111;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 15px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                transform: translateX(100%);
+                transition: transform 0.3s ease;
+            }
+
+            .navlinks.open {
+                transform: translateX(0);
+            }
+
+            .togglebtn {
+                display: flex;
+            }
+
+            .togglebtn.click span:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+
+            .togglebtn.click span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .togglebtn.click span:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+        }
+
+        .hobbies {
+    background-color: #111;
+    max-width: 800px;
+    padding: 2rem 3rem;
+    border-radius: 10px;
+    margin: 1.5rem auto;
+}
+
+.hobbies h1 {
+    color: #f2f2f2;
+    margin-bottom: 1.1rem;
+    position: relative;
+    display: inline-block;
+    font-size: 3.5rem;
+}
+
+.hobbies h1::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: -50%;
+    width: 45%;
+    height: 3px;
+    background: linear-gradient(45deg, #f64c57, #e21b5a);
+}
+
+.hobbies .work {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.workbox {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+    border: 1px solid #333;
+    padding: 1rem;
+    margin: 1rem;
+    align-items: center;
+}
+
+.workbox .icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.workbox .icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.workbox .desc {
+    width: 75%;
+    color: #555;
+    margin-left: 15px;
+}
+
+.workbox .desc h3 {
+    color: #f2f2f2;
+    margin-bottom: 5px;
+}
+
+.workbox .desc p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hobbies {
+        padding: 1rem 1.5rem;
+    }
+
+    .hobbies h1 {
+        font-size: 2.2rem;
+    }
+
+    .hobbies .work {
+        grid-template-columns: 1fr;
+    }
+
+    .workbox {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .workbox .desc {
+        width: 100%;
+        margin-left: 0;
+    }
+}
